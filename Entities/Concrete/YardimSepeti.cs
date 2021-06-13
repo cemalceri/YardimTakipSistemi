@@ -1,21 +1,20 @@
 ﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Product:IEntity
+    public class YardimSepeti : IEntity
     {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public int CategoryId { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public decimal UnitPrice { get; set; }
-        public short UnitsInStock { get; set; }
+        public int Id { get; set; }
+        public int YardimTurId { get; set; }
+        public int YardimCesitId { get; set; }
+        public int Miktari { get; set; }
+        public int? KalanMiktari { get; set; }
+        public int? DagitilanKisiSayisi { get; set; }
+        public string Aciklama { get; set; }
         public int? EkleyenId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime? EklemeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
-
 }

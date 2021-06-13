@@ -1,15 +1,15 @@
-﻿using System;
+﻿using Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Core.Entities;
 
-namespace Core.Entities.Concrete
+namespace Entities.Concrete
 {
-    public class UserOperationClaim : IEntity
+   public class Ilce:IEntity
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int OperationClaimId { get; set; }
+        public int SehirId { get; set; }
+        public string Adi { get; set; }
         public int? EkleyenId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime? EklemeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }

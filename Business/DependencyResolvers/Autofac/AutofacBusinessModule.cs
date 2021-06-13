@@ -13,7 +13,7 @@ using DataAccess.Concrete.EntityFramework;
 
 namespace Business.DependencyResolvers.Autofac
 {
-    public class AutofacBusinessModule:Module
+    public class AutofacBusinessModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
@@ -28,6 +28,30 @@ namespace Business.DependencyResolvers.Autofac
 
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
+
+            builder.RegisterType<DosyaManager>().As<IDosyaService>();
+            builder.RegisterType<EfDosyaDal>().As<IDosyaDal>();
+
+            builder.RegisterType<IlceManager>().As<IIlceService>();
+            builder.RegisterType<EfIlceDal>().As<IIlceDal>();
+
+            builder.RegisterType<NesneDegerManager>().As<INesneDegerService>();
+            builder.RegisterType<EfNesneDegerDal>().As<INesneDegerDal>();
+
+            builder.RegisterType<NesneTipManager>().As<INesneTipService>();
+            builder.RegisterType<EfNesneTipDal>().As<INesneTipDal>();
+
+            builder.RegisterType<SehirManager>().As<ISehirService>();
+            builder.RegisterType<EfSehirDal>().As<ISehirDal>();
+
+            builder.RegisterType<VatandasManager>().As<IVatandasService>();
+            builder.RegisterType<EfVatandasDal>().As<IVatandasDal>();
+
+            builder.RegisterType<YardimManager>().As<IYardimService>();
+            builder.RegisterType<EfYardimDal>().As<IYardimDal>();
+
+            builder.RegisterType<YardimSepetiManager>().As<IYardimSepetiService>();
+            builder.RegisterType<EfYardimSepetiDal>().As<IYardimSepetiDal>();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

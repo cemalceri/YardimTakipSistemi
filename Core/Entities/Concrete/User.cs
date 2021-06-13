@@ -14,7 +14,7 @@ namespace Core.Entities.Concrete
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
         public bool Status { get; set; }
-
-
+        public int? EkleyenId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime? EklemeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

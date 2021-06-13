@@ -61,7 +61,7 @@ namespace Business.Concrete
                 return result;
             }
             _productDal.Add(product);
-            return new SuccessResult(Messages.ProductAdded);
+            return new SuccessResult(Messages.Added);
         }
 
         private IResult CheckIfProductNameExists(string productName)
@@ -90,14 +90,14 @@ namespace Business.Concrete
         public IResult Delete(Product product)
         {
             _productDal.Delete(product);
-            return new SuccessResult(Messages.ProductDeleted);
+            return new SuccessResult(Messages.Deleted);
         }
 
         public IResult Update(Product product)
         {
 
             _productDal.Update(product);
-            return new SuccessResult(Messages.ProductUpdated);
+            return new SuccessResult(Messages.Updated);
         }
 
         [TransactionScopeAspect]
@@ -105,7 +105,7 @@ namespace Business.Concrete
         {
             _productDal.Update(product);
             _productDal.Add(product);
-            return new SuccessResult(Messages.ProductUpdated);
+            return new SuccessResult(Messages.Updated);
         }
     }
 }

@@ -7,11 +7,11 @@ using Core.Entities.Concrete;
 
 namespace DataAccess.Concrete.EntityFramework.Contexts
 {
-    public class NorthwindContext:DbContext
+    public class YardimTakipContext:DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-0NK3LBF\SQLEXPRESS;Initial Catalog=YardimTakip;Integrated Security=True");
         }
 
         public DbSet<Product> Products { get; set; }

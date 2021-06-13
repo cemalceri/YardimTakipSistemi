@@ -6,6 +6,8 @@ namespace Core.Utilities.Results
 {
     public class SuccessDataResult<T>:DataResult<T>
     {
+        //private object p;
+
         public SuccessDataResult(T data, string message) : base(data, true, message)
         {
         }
@@ -23,5 +25,10 @@ namespace Core.Utilities.Results
         {
 
         }
+
+        //public SuccessDataResult(object p)
+        //{
+        //    this.p = p;
+        //}
     }
 }

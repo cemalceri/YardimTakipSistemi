@@ -1,15 +1,18 @@
-﻿using System;
+﻿using Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Core.Entities;
 
-namespace Core.Entities.Concrete
+namespace Entities.Concrete
 {
-    public class UserOperationClaim : IEntity
+   public class Dosya :IEntity
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int OperationClaimId { get; set; }
+        public string UniqId { get; set; }
+        public string Name { get; set; }
+        public string ContentType  { get; set; }
+        public long? Size { get; set; }
+        public byte[] SizeSize { get; set; }
         public int? EkleyenId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime? EklemeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }

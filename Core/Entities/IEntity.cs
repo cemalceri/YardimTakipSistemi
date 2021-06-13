@@ -6,5 +6,7 @@ namespace Core.Entities
 {
     public interface IEntity
     {
+        int? EkleyenId { get; set; }
+        DateTime? EklemeTarihi { get; set; }
     }
 }

@@ -9,5 +9,7 @@ namespace Entities.Concrete
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public int? EkleyenId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime? EklemeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
